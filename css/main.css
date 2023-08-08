@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/poppins-v5-latin_devanagari-regular.woff") format("woff"),
+    url("../fonts/Poppins/poppins-v5-latin_devanagari-regular.woff2") format("woff2");
+}
+body{
+    font-size: 25px;
+    font-weight: 500; /* normal(100-500),bold(600-900) */
+    font-style: italic; /* normal,italic */
+}
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.main-menu{
+    margin: 0;
+    padding: 0;
+    border: 1px solid #f1f1f1;
+}
+.main-menu-item{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+.main-menu-item a{
+    color: #808080;
+    text-decoration: none;
+    padding: 20px 15px;
+    display: inline-block;
+}
+.main-menu-item:hover a{
+    background-color: royalblue;
+    color: #ffffff;
+}
+.sub-menu{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    display: none;
+}
+.sub-menu-item{
+    list-style: none;
+    color: #808080;
+    padding: 10px 15px;
+    position: relative;
+}
+.sub-menu-item:hover{
+    color: #ffffff;
+    background-color: rgba(65,105,225,0.5); /* rgb => red,green,blue,alpha */
+}
+.main-menu-item:hover > .sub-menu{
+    display: block;
+}
+.sub-menu-item > .sub-menu{
+    left: 100%;
+    top: 0;
+}
+.sub-menu-item:hover > .sub-menu{
+    display: block;
+}
+
+.main-menu-item::before{
+    content: '';
+    border: 20px solid transparent;
+    border-top-color: royalblue;
+    position: absolute;
+    left: 30px;
+    bottom: -40px;
+}
